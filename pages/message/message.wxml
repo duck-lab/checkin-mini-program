@@ -1,0 +1,1 @@
+<text wx:if="{{showMesage}}">{{message}}</text>

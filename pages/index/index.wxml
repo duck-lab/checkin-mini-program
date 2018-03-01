@@ -1,0 +1,21 @@
+
+
+<view class="container">
+  <view class="flex-wrp">
+    <view class="userInfo" >
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image class="flex-item infoAvatar"mode="aspectFit" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="flex-item infoName">{{userInfo.nickName}}</text>
+        <view class="flex-item group infoState">
+          <icon type="waiting" size="40" color="orange"/>
+        </view>
+      </block>
+    </view>
+    <view class="qrCode">
+      <image class="qrCode"mode="aspectFit" src="https://www.patrick-wied.at/static/qrgen/qrgen.php?content=A%20text,%20your%20name,%20a%20number%20or%20anything...%20;)"></image>
+    </view>
+    <button class="scanButton" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+      disabled="{{}}" bindtap="swithToScan"> {{switchToScan}} </button>
+  </view>
+</view>

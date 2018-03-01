@@ -1,0 +1,32 @@
+.userInfo {
+  display: flex;  
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+}
+
+.infoAvatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.infoName {
+  color: #aaa;
+}
+
+.infoState {
+  margin-right: 30rpx;
+}
+
+.qrCode {
+  width: 100%;
+}
+
+.scanButton {
+
+  align-self: flex-end;
+  margin-bottom: 50rpx; 
+}
